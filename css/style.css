@@ -157,3 +157,169 @@ body {
   object-fit: cover;
   border: 1px solid red;
 }
+
+.costumer-reviews {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.costumer-reviews h2 {
+  color: #183B56;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.costumer-reviews .reviews-subtitle {
+  color: #5A7184;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto 40px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  max-width: 27.2rem;
+  line-height: 2.8rem;
+}
+.costumer-reviews .review-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.costumer-reviews .review-cards .review-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0.131rem 0.262rem 1.834rem 0rem rgba(0, 0, 0, 0.0784313725);
+  text-align: left;
+  width: 100%;
+  max-width: 32rem;
+  box-sizing: border-box;
+}
+.costumer-reviews .review-cards .review-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.572rem;
+  margin-bottom: 15px;
+}
+.costumer-reviews .review-cards .review-card img {
+  margin-left: 4.5rem;
+  width: 4.585rem;
+  height: 4.585rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.costumer-reviews .review-cards .review-card h4 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #12141D;
+  line-height: 1.703rem;
+}
+.costumer-reviews .review-cards .review-card span {
+  font-size: 0.917rem;
+  color: #12141D;
+  font-weight: 400;
+  line-height: 1.572rem;
+}
+.costumer-reviews .review-cards .review-card p {
+  font-weight: 400;
+  color: #12141D;
+  line-height: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+.costumer-reviews .reviews-seemore {
+  margin-top: 30px;
+}
+.costumer-reviews .reviews-seemore button {
+  background: #052A44;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.costumer-reviews .review-controls {
+  display: none;
+}
+
+.lets-work-together {
+  padding: 2rem 1rem;
+}
+.lets-work-together .work-container {
+  background-color: #E8DB84;
+  border-radius: 1rem;
+  padding: 2.4rem 1.3rem;
+  text-align: center;
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.lets-work-together .work-header {
+  margin-bottom: 2rem;
+}
+.lets-work-together .work-header h2 {
+  color: #000000;
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 4rem;
+  letter-spacing: 0.02rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.lets-work-together .work-header p {
+  color: #000000;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 2.8rem;
+  margin: 0;
+}
+.lets-work-together .work-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 32rem;
+}
+.lets-work-together .work-form input, .lets-work-together .work-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  background-color: white;
+  color: #1E1E1E;
+  box-sizing: border-box;
+  padding: 2rem 2.4rem;
+}
+.lets-work-together .work-form input::placeholder, .lets-work-together .work-form textarea::placeholder {
+  color: #12141D;
+  font-weight: 400;
+}
+.lets-work-together .work-form textarea {
+  resize: none;
+}
+.lets-work-together .work-form .form-action {
+  margin-top: 1rem;
+}
+.lets-work-together .work-form .form-action button {
+  background-color: #052A44;
+  color: white;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  max-width: 20rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

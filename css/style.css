@@ -442,8 +442,22 @@ body {
 }
 
 @media screen and (min-width: 72rem) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header button:nth-child(1) img:nth-child(1) {
+    z-index: 100;
+  }
   .header .nav-pop-up {
     display: flex;
+  }
+  .header .nav-pop-up .pop-up-buttons {
+    display: none;
+  }
+  .header .nav-pop-up ul {
+    flex-direction: row;
   }
 }
 body:has(#dark-mode:checked) {

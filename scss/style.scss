@@ -127,69 +127,8 @@
         }
 }
 
-
-body {
-    padding: 2rem 2.4rem;
-    background-color: rgb(255, 255, 255);
-}
-
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    button:nth-child(1) {
-        img:nth-child(2) {
-            display: none;
-        }
-    }
-    .lightmode-icon {
-        display: none;
-    }
-
-    .burger-menu-dark-mode-icon {
-        display: none;
-    }
-    input {
-        display: none;
-    }
-
-    button {
-        background-color: transparent;
-        border: none;
-        img {
-            height: 2.4rem;
-            width: 7.7143rem;
-        }
-    }
-
-
-    div {
-        display: flex;
-        column-gap: 3.6rem;
-    }
-
-    label {
-        
-        
-        img {
-            height: 2.4rem;
-            width: 2.4rem;
-        }
-    }
-
-}
-
-.header:has(#burger-menu:checked) .nav-pop-up {
-    display: flex;
-}
-
-
-
-
-
-.nav-pop-up {
-    display: none;
+@mixin nav-menu-mobile() {
+     display: none;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -262,9 +201,70 @@ body {
             
 
        
-    
+}
+
+body {
+    padding: 2rem 2.4rem;
+    background-color: rgb(255, 255, 255);
+}
 
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    button:nth-child(1) {
+        img:nth-child(2) {
+            display: none;
+        }
+    }
+    .lightmode-icon {
+        display: none;
+    }
+
+    .burger-menu-dark-mode-icon {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        img {
+            height: 2.4rem;
+            width: 7.7143rem;
+        }
+    }
+
+
+    div {
+        display: flex;
+        column-gap: 3.6rem;
+    }
+
+    label {
+        
+        
+        img {
+            height: 2.4rem;
+            width: 2.4rem;
+        }
+    }
+
+}
+
+.header:has(#burger-menu:checked) .nav-pop-up {
+    display: flex;
+}
+
+
+
+
+
+.nav-pop-up {
+    @include nav-menu-mobile();
 }
 
 
@@ -445,7 +445,6 @@ body {
     }
    
     .about-us-cards {
-
         display: grid;
         row-gap: 5.5rem;
         padding-bottom: 26px;
@@ -467,10 +466,23 @@ body {
 
     @media screen and (min-width: 72rem) {
         .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            button:nth-child(1) {
+                img:nth-child(1) {
+                    z-index: 100;
+                }
+            }
            .nav-pop-up {
-                display: flex;
-                
-           }
+            display: flex;
+            .pop-up-buttons {
+                display: none;
+                }
+                ul {
+                    flex-direction: row;
+                }
+        }
             
         }
     } 

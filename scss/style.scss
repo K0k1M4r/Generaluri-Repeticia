@@ -109,22 +109,63 @@ body {
 }
 
 
+.hero-section-full {
+    display: flex;
+    align-items: center;
+    
+    .hero-card-column {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        
+        position: absolute;
+        left: 0;
+        z-index: 20;
+
+        article:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+            background-color: white;
+            
+        }
+
+        article:nth-child(2) {
+            grid-column: 1;
+            grid-row: 2;
+            background-color: white;
+        }
+
+        article:nth-child(3) {
+            grid-column: 1;
+            grid-row: 3;
+            background-color: white;
+        }
+        
+    }
+}
+
 .hero-section-picture-section {
     padding-top: 4.4rem;
+    overflow: hidden;     
+    
     .hero-pic-container {
         background-color: #E8DB84;
         height: 17.5rem;
-        width: 100%;
-        border-radius: 8.6px;
+        width: 21.7566rem;
+        border-radius: 0.86rem;
         position: relative;
         
+        
+        
+
             img {
                 height: 22rem;
                 position: absolute;
                 bottom: 0;
                 left: -30%;
-                object-fit: cover;
                 border: 1px solid red;
+                
             }
         
         
@@ -185,8 +226,8 @@ body {
 
             img {
                 margin-left: 4.5rem;
-                width: 4.585rem;
-                height: 4.585rem;
+                width: 4.5rem;
+                height: 4.5rem;
                 border-radius: 50%;
                 object-fit: cover;
             }
@@ -211,11 +252,12 @@ body {
             p {
                 font-weight: 400;
                 color: #12141D;
-                line-height: 1rem;
+                line-height: 2rem;
                 font-family: "Poppins", sans-serif;
                 font-size: 1.2rem;
                 margin: 0;
                 text-align: center;
+    
             }
         }
     }
@@ -227,6 +269,7 @@ body {
             background: #052A44;
             color: white;
             padding: 0.8rem 1.2rem;
+            font-size: 1.4rem;
             border: none;
             border-radius: 0.8rem;
             font-weight: 500;
@@ -280,7 +323,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        max-width:32rem;
 
         input, textarea {
             width: 100%;
@@ -310,10 +352,9 @@ body {
             button {
                 background-color: #052A44; 
                 color: white;
-                width: 100%; 
+                padding: 1.5rem 4.3rem;
                 font-family: "Poppins", sans-serif;
                 max-width: 20rem;
-                padding: 1rem;
                 border: none;
                 border-radius: 0.6rem;
                 font-size: 1.6rem;
@@ -323,5 +364,91 @@ body {
         }
     }
 }
+
+
+footer {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 2.4rem 2.4rem;
+
+  .footer-header {
+    margin-bottom: 40px;
+    gap:0.8rem;
+    
+    h4 {
+      color: #052A44;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin: 5px 0;
+      color: #071210;
+      line-height: 3.6rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  .footer-logos {
+    margin-bottom: 40px;
+    gap:0.9rem;
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: 3.3rem;
+        height: 3.3rem;
+        color: #071210;
+        border: 1px solid #000;
+        border-radius: 50%;
+        
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+        transition: transform 0.2s ease;
+        
+
+        &:hover {
+          background-color: #000;
+          color: #fff;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .footer-last {
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .email-text {
+      color: #000;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
 
 

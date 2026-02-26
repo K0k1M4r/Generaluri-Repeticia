@@ -139,14 +139,44 @@ body {
   align-self: center;
 }
 
+.hero-section-full {
+  display: flex;
+  align-items: center;
+}
+.hero-section-full .hero-card-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  position: absolute;
+  left: 0;
+  z-index: 20;
+}
+.hero-section-full .hero-card-column article:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: white;
+}
+.hero-section-full .hero-card-column article:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: white;
+}
+.hero-section-full .hero-card-column article:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: white;
+}
+
 .hero-section-picture-section {
   padding-top: 4.4rem;
+  overflow: hidden;
 }
 .hero-section-picture-section .hero-pic-container {
   background-color: #E8DB84;
   height: 17.5rem;
-  width: 100%;
-  border-radius: 8.6px;
+  width: 21.7566rem;
+  border-radius: 0.86rem;
   position: relative;
 }
 .hero-section-picture-section .hero-pic-container img {
@@ -154,7 +184,6 @@ body {
   position: absolute;
   bottom: 0;
   left: -30%;
-  object-fit: cover;
   border: 1px solid red;
 }
 
@@ -203,8 +232,8 @@ body {
 }
 .costumer-reviews .review-cards .review-card img {
   margin-left: 4.5rem;
-  width: 4.585rem;
-  height: 4.585rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -225,7 +254,7 @@ body {
 .costumer-reviews .review-cards .review-card p {
   font-weight: 400;
   color: #12141D;
-  line-height: 1rem;
+  line-height: 2rem;
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   margin: 0;
@@ -238,6 +267,7 @@ body {
   background: #052A44;
   color: white;
   padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
   border: none;
   border-radius: 0.8rem;
   font-weight: 500;
@@ -284,7 +314,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 32rem;
 }
 .lets-work-together .work-form input, .lets-work-together .work-form textarea {
   width: 100%;
@@ -311,15 +340,80 @@ body {
 .lets-work-together .work-form .form-action button {
   background-color: #052A44;
   color: white;
-  width: 100%;
+  padding: 1.5rem 4.3rem;
   font-family: "Poppins", sans-serif;
   max-width: 20rem;
-  padding: 1rem;
   border: none;
   border-radius: 0.6rem;
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 2.4rem 2.4rem;
+}
+footer .footer-header {
+  margin-bottom: 40px;
+  gap: 0.8rem;
+}
+footer .footer-header h4 {
+  color: #052A44;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+footer .footer-header p {
+  margin: 5px 0;
+  color: #071210;
+  line-height: 3.6rem;
+  font-size: 1.6rem;
+}
+footer .footer-logos {
+  margin-bottom: 40px;
+  gap: 0.9rem;
+}
+footer .footer-logos p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+footer .footer-logos .social-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+footer .footer-logos .social-wrapper a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.3rem;
+  height: 3.3rem;
+  color: #071210;
+  border: 1px solid #000;
+  border-radius: 50%;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+footer .footer-logos .social-wrapper a:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}
+footer .footer-last p {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+footer .footer-last .email-text {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+footer .footer-last .email-text:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

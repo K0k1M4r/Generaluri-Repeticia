@@ -2,24 +2,164 @@
 @use "./fonts";
 
 
+
+%button-color-pallete {
+    background-color: #052A44;
+    color: white;
+}
+%button-color-pallete-darkmode {
+    background-color: white;
+    color: #052A44;
+}
+
+
+%Poppins-font {
+    font-family: "Poppins", sans-serif;
+}
+
+%OpenSans-font {
+    font-family: "Open Sans", sans-serif;
+}
+    
+
+@mixin hero-article($bg-color: white, $padding: 2.052rem 1.655rem 1.429rem 1.655rem) {
+        font-family: "Nunito Sans", sans-serif;
+        background-color: $bg-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.4rem;
+        margin: auto;
+        padding: $padding;
+        box-shadow: 0.74px 1.48px 14.03px 0px #00000014;
+        h4 {
+            font-size: 0.554rem;
+            font-weight: 700;
+            margin: 0; 
+        }
+
+        p {
+            font-size: 0.443rem;
+            margin: 0; 
+        }
+    }
+
+@mixin important-button-template() {
+     
+            font-size: 1.4rem;
+            width: 10.5rem;
+            height: 3.7rem;
+            @extend %button-color-pallete;
+            border: none;
+            border-radius: 0.8rem;
+            @extend %Poppins-font;
+            font-weight: 500;
+     
+}
+@mixin important-button-template-darkmode() {
+            font-size: 1.4rem;
+            width: 10.5rem;
+            height: 3.7rem;
+            @extend %button-color-pallete-darkmode;
+            border: none;
+            border-radius: 0.8rem;
+            @extend %Poppins-font;
+            font-weight: 500;
+}
+
+@mixin hero-article-photo-container() {
+    div {
+         display: flex;
+                
+                img {
+                height: 0.9713rem;
+                border-radius: 50%;
+                }
+
+                img:nth-child(4) {
+                z-index: 20;
+            }
+    }
+               
+            
+}    
+
+@mixin about-us-card() {
+    article {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            box-shadow: 0.074rem 0.148rem 1.403rem 0rem #00000014;
+            width: fit-content;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            row-gap: 1rem;
+            padding: 4.9rem 2.2rem;
+            border-radius: 1.139rem;
+            div {
+                border-radius: 50%;
+                background-color: #052A44;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5.0523rem;
+                width: 5.0523rem;
+                position: absolute;
+                top: -12%;
+                img {
+                    height: 2.3241rem;
+                }
+            }
+
+            h3 {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                font-weight: 600;
+                font-size: 1.8rem;
+            }
+
+            p {
+                @extend %Poppins-font;
+                font-size: 1.6rem;
+                max-width: 218.45822143554688px;
+                line-height: 180%;
+            }
+        }
+}
+
+
 body {
     padding: 2rem 2.4rem;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
 }
 
 
 .header {
     display: flex;
     justify-content: space-between;
-    
+    position: relative;
+    button:nth-child(1) {
+        img:nth-child(2) {
+            display: none;
+        }
+    }
+    .lightmode-icon {
+        display: none;
+    }
+
+    .burger-menu-dark-mode-icon {
+        display: none;
+    }
+    input {
+        display: none;
+    }
 
     button {
-        border: none;
         background-color: transparent;
-
+        border: none;
         img {
             height: 2.4rem;
-            width: 77.14286041259766px;
+            width: 7.7143rem;
         }
     }
 
@@ -30,9 +170,8 @@ body {
     }
 
     label {
-        input {
-            display: none;
-        }
+        
+        
         img {
             height: 2.4rem;
             width: 2.4rem;
@@ -41,6 +180,92 @@ body {
 
 }
 
+.header:has(#burger-menu:checked) .nav-pop-up {
+    display: flex;
+}
+
+
+
+
+
+.nav-pop-up {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+    row-gap: 2.8rem;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    padding-bottom: 6.6rem;
+    top: 0;
+    left: 0;
+
+    div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        button:nth-child(1) {
+        img:nth-child(2) {
+            display: none;
+        }
+    }
+    }
+
+
+    label {   
+            div {
+                position: relative;
+                img:nth-child(1) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                img:nth-child(2) {
+                    position: relative;
+                }
+            }
+            div:nth-child(2){
+                display: none;
+            }
+        
+    }
+
+   ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.5rem;
+        a {
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-decoration: none;
+            color: black;
+            @extend %Poppins-font;
+        }
+   } 
+    
+   
+   
+    button:nth-child(3) {
+            background-color: black;
+            width: fit-content;
+            color: white;
+            @extend %Poppins-font;
+            border-radius: 0.8rem;
+            padding: 1.5rem 3.6rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+     }
+            
+
+       
+    
+
+
+}
 
 
 .hero-section {
@@ -54,10 +279,12 @@ body {
     padding-top: 4rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     max-width: 27.2rem;
     row-gap: 1.4rem;
-    font-family: "Poppins", sans-serif;
+    @extend %Poppins-font;
+    
     h1 {
         font-size: 3.2rem;
         word-spacing: -0.7rem;
@@ -73,16 +300,10 @@ body {
         display: flex;
         column-gap: 0.8rem;
         button:nth-child(1) {
-            font-size: 1.4rem;
-            width: 10.5rem;
-            height: 3.7rem;
-            background-color: #052A44;
-            color: white;
-            border: none;
-            border-radius: 0.8rem;
-            font-family: "Poppins", sans-serif;
+            @include important-button-template();
         }
-
+        
+      
         button:nth-child(2) {
             font-size: 1.4rem;
             background-color: transparent;
@@ -91,11 +312,16 @@ body {
             display: flex;
             column-gap: 0.5rem;
             align-items: center;
-            font-family: "Poppins", sans-serif;
+            @extend %Poppins-font;
+            color: black;
+            font-weight: 500;
 
             div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: white;
-                padding: 1rem 0.9rem 0.9rem 1rem;
+                padding: 1rem 1rem 1rem 1.3rem;
                 border-radius: 50%;
                 img {
                     height: 1.7rem;
@@ -110,36 +336,57 @@ body {
 
 
 .hero-section-full {
+    padding-top: 4.4rem;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
     
     .hero-card-column {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        align-items: center;
-        
+        row-gap: 0.516rem;
         position: absolute;
-        left: 0;
-        z-index: 20;
+        left: -17%;
+        z-index: 2;
+        
+        
 
         article:nth-child(1) {
+            @include hero-article();
             grid-column: 1;
             grid-row: 1;
-            background-color: white;
             
+            button {
+                height: 1.297rem;
+                width: 1.2992rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: none;
+                @extend %button-color-pallete
+            }
+
         }
 
         article:nth-child(2) {
+            @include hero-article();
             grid-column: 1;
             grid-row: 2;
-            background-color: white;
+            
+            @include hero-article-photo-container();
+          
+
+            
+            
         }
 
         article:nth-child(3) {
+            @include hero-article();
             grid-column: 1;
             grid-row: 3;
-            background-color: white;
+            @include hero-article-photo-container();
         }
         
     }
@@ -160,15 +407,163 @@ body {
         
 
             img {
-                height: 22rem;
+                height: 220px;
                 position: absolute;
                 bottom: 0;
                 left: -30%;
-                border: 1px solid red;
+                
                 
             }
         
         
     }
 
+    
+
 }
+
+
+.about-us-header-text {
+        
+        padding-top: 6.2rem;
+        padding-bottom: 55px;
+        row-gap: 2.6rem;
+
+        h2 {
+            @extend %Poppins-font;
+            font-size: 28px;
+            font-weight: 400;
+            color: #183B56;
+        }
+        p {
+            max-width: 27.2rem;
+            @extend %OpenSans-font;
+            line-height: 2.8rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+   
+    .about-us-cards {
+
+        display: grid;
+        row-gap: 5.5rem;
+        padding-bottom: 26px;
+        @include about-us-card();
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+
+        button {
+            @include important-button-template();
+            
+        }
+       
+    }
+
+    @media screen and (min-width: 72rem) {
+        .header {
+           .nav-pop-up {
+                display: flex;
+                
+           }
+            
+        }
+    } 
+
+
+
+    body:has(#dark-mode:checked)  {
+        background-color: #021c2e;
+        header {
+            button:nth-child(1) {
+            img:nth-child(1) {
+               display: none;
+                }
+            img:nth-child(2) {
+                display: flex;
+            }    
+            }
+
+            .darkmode-icon {
+                display: none;
+            }
+            .lightmode-icon {
+                display: flex;
+            }
+            .burger-menu-icon {
+                display: none;
+            }
+            .burger-menu-dark-mode-icon {
+                display: flex;
+                
+            }
+
+            .nav-pop-up {
+                background-color: #021c2e;
+                button:nth-child(1) {
+                img:nth-child(1) {
+                display: none;
+                    }
+                img:nth-child(2) {
+                    display: flex;
+                }    
+                }
+                label {   
+                    div:nth-child(1) {
+                        display: none;
+                    }
+                    div:nth-child(2){
+                    display: flex;    
+                    position: relative;
+                        img:nth-child(1) {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        img:nth-child(2) {
+                            position: relative;
+                        }
+                    }
+            
+                 }
+                 a {
+                    color: white;
+                 }
+
+                 button:nth-child(3) {
+                   @extend %button-color-pallete-darkmode;
+                 }
+
+            }
+
+        }
+        .hero-section {
+            .hero-section-text-cont {
+                h1, p {
+                    color: white;
+                }
+                button:nth-child(1) {
+                   @include important-button-template-darkmode()
+                }
+
+                button:nth-child(2) {
+                    color: white;
+                }
+            }
+        }
+        .about-us {
+            .about-us-header-text {
+                h2, p {
+                    color: white;
+                }
+        }
+        
+     }   
+        
+    }

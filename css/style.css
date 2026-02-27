@@ -93,11 +93,11 @@ body {
 .header input {
   display: none;
 }
-.header button {
+.header button:nth-child(1) {
   background-color: transparent;
   border: none;
 }
-.header button img {
+.header button:nth-child(1) img {
   height: 2.4rem;
   width: 7.7143rem;
 }
@@ -105,13 +105,35 @@ body {
   display: flex;
   column-gap: 3.6rem;
 }
-.header label img {
+.header .header-buttons label:nth-child(2) img {
   height: 2.4rem;
-  width: 2.4rem;
+}
+.header .header-buttons label:nth-child(2) div {
+  display: none;
 }
 
 .header:has(#burger-menu:checked) .nav-pop-up {
   display: flex;
+}
+
+.header:has(#burger-menu:checked) .burger-menu-icon,
+.header:has(#burger-menu:checked) .burger-menu-dark-mode-icon {
+  display: none;
+}
+.header:has(#burger-menu:checked) .header-buttons label:nth-child(2) div:nth-of-type(1) {
+  display: flex;
+  position: relative;
+}
+.header:has(#burger-menu:checked) .header-buttons label:nth-child(2) div:nth-of-type(1) img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header:has(#burger-menu:checked) .header-buttons label:nth-child(2) div:nth-of-type(1) img:nth-child(2) {
+  position: relative;
+}
+.header:has(#burger-menu:checked) .header-buttons label:nth-child(2) div:nth-child(3) {
+  display: none;
 }
 
 .nav-pop-up {
@@ -125,7 +147,7 @@ body {
   background-color: white;
   width: 100%;
   padding-bottom: 6.6rem;
-  top: 0;
+  top: 120%;
   left: 0;
 }
 .nav-pop-up div:nth-child(1) {
@@ -134,20 +156,6 @@ body {
   width: 100%;
 }
 .nav-pop-up div:nth-child(1) button:nth-child(1) img:nth-child(2) {
-  display: none;
-}
-.nav-pop-up label div {
-  position: relative;
-}
-.nav-pop-up label div img:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.nav-pop-up label div img:nth-child(2) {
-  position: relative;
-}
-.nav-pop-up label div:nth-child(2) {
   display: none;
 }
 .nav-pop-up ul {
@@ -490,21 +498,6 @@ body:has(#dark-mode:checked) header .nav-pop-up button:nth-child(1) img:nth-chil
 body:has(#dark-mode:checked) header .nav-pop-up button:nth-child(1) img:nth-child(2) {
   display: flex;
 }
-body:has(#dark-mode:checked) header .nav-pop-up label div:nth-child(1) {
-  display: none;
-}
-body:has(#dark-mode:checked) header .nav-pop-up label div:nth-child(2) {
-  display: flex;
-  position: relative;
-}
-body:has(#dark-mode:checked) header .nav-pop-up label div:nth-child(2) img:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-body:has(#dark-mode:checked) header .nav-pop-up label div:nth-child(2) img:nth-child(2) {
-  position: relative;
-}
 body:has(#dark-mode:checked) header .nav-pop-up a {
   color: white;
 }
@@ -524,4 +517,20 @@ body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-ch
 }
 body:has(#dark-mode:checked) .about-us .about-us-header-text h2, body:has(#dark-mode:checked) .about-us .about-us-header-text p {
   color: white;
+}
+
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .lightmode-closebutton {
+  display: none;
+}
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .darkmode-closebutton {
+  display: flex;
+  position: relative;
+}
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .darkmode-closebutton img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .darkmode-closebutton img:nth-child(2) {
+  position: relative;
 }

@@ -141,17 +141,7 @@
     top: 120%;
     left: 0;
 
-    div:nth-child(1) {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-
-        button:nth-child(1) {
-        img:nth-child(2) {
-            display: none;
-        }
-    }
-    }
+   
 
 
     
@@ -171,7 +161,7 @@
     
    
    
-    button:nth-child(3) {
+    button {
             background-color: black;
             width: fit-content;
             color: white;
@@ -244,24 +234,7 @@ body {
     
     
     
-    //     label:nth-child(2) {   
-    //         div {
-    //             position: relative;
-    //             img:nth-child(1) {
-    //                 position: absolute;
-    //                 top: 0;
-    //                 left: 0;
-    //             }
-    
-    //             img:nth-child(2) {
-    //                 position: relative;
-    //             }
-    //         }
-    //         div:nth-child(3){
-    //             display: none;
-    //         }
-        
-    // }
+   
     
     
 }
@@ -274,7 +247,8 @@ body {
 .header:has(#burger-menu:checked) {
 
     .burger-menu-icon,
-    .burger-menu-dark-mode-icon {
+    .burger-menu-dark-mode-icon,
+    .light-dark-modes-switcher {
         display: none;
     }
 
@@ -564,38 +538,13 @@ body {
 
             .nav-pop-up {
                 background-color: #021c2e;
-                button:nth-child(1) {
-                img:nth-child(1) {
-                display: none;
-                    }
-                img:nth-child(2) {
-                    display: flex;
-                }    
-                }
-                // label {   
-                //     div:nth-child(1) {
-                //         display: none;
-                //     }
-                //     div:nth-child(2){
-                //     display: flex;    
-                //     position: relative;
-                //         img:nth-child(1) {
-                //             position: absolute;
-                //             top: 0;
-                //             left: 0;
-                //         }
-
-                //         img:nth-child(2) {
-                //             position: relative;
-                //         }
-                //     }
-            
-                //  }
+                
+               
                  a {
                     color: white;
                  }
 
-                 button:nth-child(3) {
+                 button {
                    @extend %button-color-pallete-darkmode;
                  }
 
@@ -632,23 +581,23 @@ body {
     }
 
     body:has(#dark-mode:checked):has(#burger-menu:checked){
-        .header-buttons {
-            .burgermenu-closebutton {
-                .lightmode-closebutton {
-                    display: none; 
-                }
-                .darkmode-closebutton {
-                    display: flex;
-                    position: relative;
-                    img:nth-child(1) {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                .header-buttons {
+                    .burgermenu-closebutton {
+                        .lightmode-closebutton {
+                            display: none; 
+                        }
+                        .darkmode-closebutton {
+                            display: flex;
+                            position: relative;
+                            img:nth-child(1) {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            img:nth-child(2) {
+                                position: relative;
+                            }
+                        }
                     }
-                    img:nth-child(2) {
-                        position: relative;
-                    }
                 }
-            }
-        }
     }

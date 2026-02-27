@@ -5,31 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
     <!-- koki -->
     <header class="header">
-        <button><img src="./assets/Logo.png" alt=""></button>
+        
 
-        <nav>
+        <button>
+            <img src="./assets/Logo.svg" alt="">
+            <img src="./assets/Logodarkmode.svg" alt="">
+        </button>
 
+
+         <nav class="nav-pop-up">
+    
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About US</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+
+            <button>Free Trial</button>
+        
         </nav>
+        
+        
+        <div class="header-buttons">
 
-        <div>
-
-            <label for="dark-mode">
-                <img src="./assets/moon.png" alt="" > 
+           <label for="dark-mode" class="light-dark-modes-switcher">
+                <img src="./assets/darkmode-icon.svg" alt="" class="darkmode-icon"> 
+                <img src="./assets/lightmode-icon.svg" alt="" class="lightmode-icon">
                 <input type="checkbox" id="dark-mode">
             </label>
                 
-            <label for="burger-menu">
-                 <img src="./assets/burger-menu.png" alt="">
-                 <input type="checkbox" id="burger-menu">   
+            <label for="burger-menu" class="burgermenu-closebutton">
+                 <img src="./assets/burger-menu.svg" alt="" class="burger-menu-icon">
+                 <img src="./assets/burger-menu-darkmode.svg" alt="" class="burger-menu-dark-mode-icon"> 
+                 <input type="checkbox" id="burger-menu">
+                    <div class="lightmode-closebutton">
+                        <img src="./assets/close-button1.svg" alt="">
+                        <img src="./assets/close-button2.svg" alt="">
+                    </div>
+                    <div class="darkmode-closebutton">
+                        <img src="./assets/close-button1darkmode.svg" alt="">
+                        <img src="./assets/close-button2darkmode.svg" alt="">
+                    </div>
+                    
+                
             </label>
 
         </div>
+
+        
+       
+
+        
         
     </header>
     <main>
@@ -46,7 +80,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                     
                     <button>
                         <div>
-                            <img src="./assets/play-btn.png" alt="">
+                            <img src="./assets/play-btn.svg" alt="">
                         </div>
                         Learn More
                     </button>
@@ -56,19 +90,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
                 <div class="hero-card-column">
                     <article>
-                        <h3>Our Happy Users</h3>
+                        <h4>Our Happy Users</h4>
                         <p>200+ Online User</p>
                         <button>+</button>
                     </article>
                     <article>
-                        <h3>Our Happy Users</h3>
-                        <p>200+ Online User</p>
-                        <button>+</button>
+                        <h4>27K</h4>
+                        <p>Member Joined</p>
+                        <div>
+                            <img src="./assets/avatarpic1.png" alt="">
+                            <img src="./assets/avatarpic2.png" alt="">
+                            <img src="./assets/avatarpic3.png" alt="">
+                            <img src="./assets/avatarpic4.png" alt="">
+                        </div>
+                        
                     </article>
                     <article>
-                        <h3>Our Happy Users</h3>
-                        <p>200+ Online User</p>
-                        <button>+</button>
+                        <h4>27K</h4>
+                        <p>Member Joined</p>
+                        <div>
+                            <img src="./assets/avatarpic1.png" alt="">
+                            <img src="./assets/avatarpic2.png" alt="">
+                            <img src="./assets/avatarpic3.png" alt="">
+                            <img src="./assets/avatarpic4.png" alt="">
+                        </div>
                     </article>
                 </div>
 
@@ -84,11 +129,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     
                 </div>
 
+
             </div>
             
 
         </section>
-        <section class="about-us"></section>
+        <section class="about-us">
+
+            <div class="about-us-header-text">
+                <h2>About US</h2>
+                <p>Skilline is one powerful online software 
+                   suite that combines all the tools needed
+                   to run a successful school or office.
+                </p>
+            </div>
+
+
+            <div class="about-us-cards">
+                <article>
+                    <div>
+                        <img src="./assets/article icon.svg" alt="">
+                    </div>
+                    <h3>Mission</h3>
+                    <p>Tailored career solutions, 
+                    industry-leading assessments, 
+                    and expert counseling.</p>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="./assets/article icon.svg" alt="">
+                    </div>
+                    <h3>Values</h3>
+                    <p>Tailored career solutions, 
+                       industry-leading assessments, 
+                       and expert counseling.</p>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="./assets/article icon.svg" alt="">
+                    </div>
+                    <h3>Unique Selling Points</h3>
+                    <p>Tailored career solutions, 
+                    industry-leading assessments, 
+                    and expert counseling.</p>
+                </article>
+
+            </div>
+            
+            <button>Get Started</button>
+
+        </section>
     <!-- koki -->    
 
 

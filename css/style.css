@@ -246,6 +246,7 @@ body {
   position: absolute;
   left: -17%;
   z-index: 2;
+  max-width: 6.1rem;
 }
 .hero-section-full .hero-card-column article:nth-child(1) {
   font-family: "Nunito Sans", sans-serif;

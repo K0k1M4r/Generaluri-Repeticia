@@ -1,5 +1,13 @@
+
 @use "./reset";
 @use "./fonts";
+@use "./btns" as b;
+@use "./variabels" as v;
+@use "./mixins" as m;
+@use "./layout/services";
+
+
+
 
 
 body {
@@ -12,7 +20,6 @@ body {
     display: flex;
     justify-content: space-between;
     
-
     button {
         border: none;
         background-color: transparent;
@@ -131,3 +138,6 @@ body {
     }
 
 }
+
+
+

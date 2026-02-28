@@ -53,13 +53,22 @@ html {
   font-size: 62.5%;
 }
 
-.hero-section-full .hero-card-column article:nth-child(1) button, .hero-section-text-cont div button:nth-child(1) {
+.about-us button, .hero-section-full .hero-card-column article:nth-child(1) button, .hero-section-text-cont div button:nth-child(1) {
   background-color: #052A44;
   color: white;
 }
 
-.hero-section-text-cont div button:nth-child(2), .hero-section-text-cont div button:nth-child(1), .hero-section-text-cont, .nav-pop-up button, .nav-pop-up ul a {
+body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-child(1), body:has(#dark-mode:checked) header .nav-pop-up button {
+  background-color: white;
+  color: #052A44;
+}
+
+body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-child(1), .about-us button, .about-us-cards article p, .about-us-header-text h2, .hero-section-text-cont div button:nth-child(2), .hero-section-text-cont div button:nth-child(1), .hero-section-text-cont, .nav-pop-up button, .nav-pop-up ul a {
   font-family: "Poppins", sans-serif;
+}
+
+.about-us-header-text p {
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -359,6 +368,161 @@ body {
   left: -30%;
 }
 
+.about-us-header-text {
+  padding-top: 6.2rem;
+  padding-bottom: 55px;
+  row-gap: 2.6rem;
+}
+.about-us-header-text h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #183B56;
+}
+.about-us-header-text p {
+  max-width: 27.2rem;
+  line-height: 2.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.about-us-cards {
+  display: grid;
+  row-gap: 5.5rem;
+  padding-bottom: 26px;
+}
+.about-us-cards article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0.074rem 0.148rem 1.403rem 0rem rgba(0, 0, 0, 0.0784313725);
+  width: fit-content;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  row-gap: 1rem;
+  padding: 4.9rem 2.2rem;
+  border-radius: 1.139rem;
+}
+.about-us-cards article div {
+  border-radius: 50%;
+  background-color: #052A44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.0523rem;
+  width: 5.0523rem;
+  position: absolute;
+  top: -12%;
+}
+.about-us-cards article div img {
+  height: 2.3241rem;
+}
+.about-us-cards article h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.about-us-cards article p {
+  font-size: 1.6rem;
+  max-width: 218.4582214355px;
+  line-height: 180%;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about-us button {
+  font-size: 1.4rem;
+  width: 10.5rem;
+  height: 3.7rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 72rem) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header button:nth-child(1) img:nth-child(1) {
+    z-index: 100;
+  }
+  .header .nav-pop-up {
+    display: flex;
+  }
+  .header .nav-pop-up .pop-up-buttons {
+    display: none;
+  }
+  .header .nav-pop-up ul {
+    flex-direction: row;
+  }
+}
+body:has(#dark-mode:checked) {
+  background-color: #021c2e;
+}
+body:has(#dark-mode:checked) header button:nth-child(1) img:nth-child(1) {
+  display: none;
+}
+body:has(#dark-mode:checked) header button:nth-child(1) img:nth-child(2) {
+  display: flex;
+}
+body:has(#dark-mode:checked) header .darkmode-icon {
+  display: none;
+}
+body:has(#dark-mode:checked) header .lightmode-icon {
+  display: flex;
+}
+body:has(#dark-mode:checked) header .burger-menu-icon {
+  display: none;
+}
+body:has(#dark-mode:checked) header .burger-menu-dark-mode-icon {
+  display: flex;
+}
+body:has(#dark-mode:checked) header .nav-pop-up {
+  background-color: #021c2e;
+}
+body:has(#dark-mode:checked) header .nav-pop-up a {
+  color: white;
+}
+body:has(#dark-mode:checked) .hero-section .hero-section-text-cont h1, body:has(#dark-mode:checked) .hero-section .hero-section-text-cont p {
+  color: white;
+}
+body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-child(1) {
+  font-size: 1.4rem;
+  width: 10.5rem;
+  height: 3.7rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+}
+body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-child(2) {
+  color: white;
+}
+body:has(#dark-mode:checked) .about-us .about-us-header-text h2, body:has(#dark-mode:checked) .about-us .about-us-header-text p {
+  color: white;
+}
+
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .lightmode-closebutton {
+  display: none;
+}
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .darkmode-closebutton {
+  display: flex;
+  position: relative;
+}
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .darkmode-closebutton img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body:has(#dark-mode:checked):has(#burger-menu:checked) .header-buttons .burgermenu-closebutton .darkmode-closebutton img:nth-child(2) {
+  position: relative;
+}
+
 .costumer-reviews {
   text-align: center;
   padding: 4rem 1rem;
@@ -587,5 +751,3 @@ footer .footer-last .email-text {
 footer .footer-last .email-text:hover {
   text-decoration: underline;
 }
-
-/*# sourceMappingURL=style.css.map */

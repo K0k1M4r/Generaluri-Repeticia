@@ -433,7 +433,177 @@ body {
         
     }
 
+    
+
 }
+
+
+.about-us-header-text {
+        
+        padding-top: 6.2rem;
+        padding-bottom: 55px;
+        row-gap: 2.6rem;
+
+        h2 {
+            @extend %Poppins-font;
+            font-size: 28px;
+            font-weight: 400;
+            color: #183B56;
+        }
+        p {
+            max-width: 27.2rem;
+            @extend %OpenSans-font;
+            line-height: 2.8rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+   
+    .about-us-cards {
+        display: grid;
+        row-gap: 5.5rem;
+        padding-bottom: 26px;
+        @include about-us-card();
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+
+        button {
+            @include important-button-template();
+            
+        }
+       
+    }
+
+    @media screen and (min-width: 72rem) {
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            button:nth-child(1) {
+                img:nth-child(1) {
+                    z-index: 100;
+                }
+            }
+           .nav-pop-up {
+            display: flex;
+            .pop-up-buttons {
+                display: none;
+                }
+                ul {
+                    flex-direction: row;
+                }
+        }
+            
+        }
+    } 
+
+
+
+    body:has(#dark-mode:checked)  {
+        background-color: #021c2e;
+        header {
+            button:nth-child(1) {
+            img:nth-child(1) {
+               display: none;
+                }
+            img:nth-child(2) {
+                display: flex;
+            }    
+            }
+
+            .darkmode-icon {
+                display: none;
+            }
+            .lightmode-icon {
+                display: flex;
+            }
+            .burger-menu-icon {
+                display: none;
+            }
+            .burger-menu-dark-mode-icon {
+                display: flex;
+                
+            }
+
+            
+            
+          
+           
+            
+
+
+            .nav-pop-up {
+                background-color: #021c2e;
+                
+               
+                 a {
+                    color: white;
+                 }
+
+                 button {
+                   @extend %button-color-pallete-darkmode;
+                 }
+
+            }
+
+
+
+
+
+        }
+        .hero-section {
+            .hero-section-text-cont {
+                h1, p {
+                    color: white;
+                }
+                button:nth-child(1) {
+                   @include important-button-template-darkmode()
+                }
+
+                button:nth-child(2) {
+                    color: white;
+                }
+            }
+        }
+        .about-us {
+            .about-us-header-text {
+                h2, p {
+                    color: white;
+                }
+        }
+        
+     }   
+        
+    }
+
+    body:has(#dark-mode:checked):has(#burger-menu:checked){
+                .header-buttons {
+                    .burgermenu-closebutton {
+                        .lightmode-closebutton {
+                            display: none; 
+                        }
+                        .darkmode-closebutton {
+                            display: flex;
+                            position: relative;
+                            img:nth-child(1) {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            img:nth-child(2) {
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+    }
+
+ 
 
 
 
@@ -449,8 +619,10 @@ body {
         letter-spacing: 0.02rem;
         margin-bottom: 1rem;
         font-family: "Poppins", sans-serif;
-    }
+     }
 
+
+ 
     .reviews-subtitle {
         color: #5A7184;
         font-family: "Poppins", sans-serif;
@@ -459,41 +631,39 @@ body {
         font-size: 1.6rem;
         max-width: 27.2rem;
         line-height: 2.8rem;
-    }
-
-    .review-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+     }
+     
+     
+      .review-cards {
+         display: flex;
+         flex-direction: column;
+         gap: 1.5rem;
         align-items: center;
-        
-
+            
         .review-card {
             background: white;
             padding: 3rem;
             border-radius: 1rem;
             box-shadow: 0.131rem 0.262rem 1.834rem 0rem #00000014;
             text-align: left;
-            width: 100%;          
+            width: 100%;
             max-width: 32rem;      
             box-sizing: border-box;
-            
+
 
             .card-header {
-                display: flex;
+                 display: flex;
                 align-items: center;
                 gap: 1.572rem;
                 margin-bottom: 15px;
-            }
-
+             }                 
             img {
                 margin-left: 4.5rem;
                 width: 4.5rem;
                 height: 4.5rem;
                 border-radius: 50%;
                 object-fit: cover;
-            }
-
+             }  
             h4 {
                 font-weight: bold;
                 font-size: 1.1rem;
@@ -501,16 +671,14 @@ body {
                 font-family: "Poppins", sans-serif;
                 color: #12141D;
                 line-height: 1.703rem;
-                
-            }
 
+             }                        
             span {
                 font-size: 0.917rem;
                 color: #12141D;
                 font-weight: 400;
                 line-height: 1.572rem;
-            }
-
+             }
             p {
                 font-weight: 400;
                 color: #12141D;
@@ -520,9 +688,12 @@ body {
                 margin: 0;
                 text-align: center;
     
-            }
+             }
         }
-    }
+    }             
+
+
+
 
     .reviews-seemore {
         margin-top: 30px;
@@ -543,6 +714,7 @@ body {
         display: none; 
     }
 }
+
 
 .lets-work-together {
     padding: 2rem 1rem;
@@ -605,8 +777,7 @@ body {
 
         textarea {
             resize: none;
-        }
-    
+         }
 
         .form-action {
             margin-top: 1rem;
@@ -622,8 +793,9 @@ body {
                 font-size: 1.6rem;
                 font-weight: 600;
                 cursor: pointer;
-            }
-        }
+             }
+         }         
+
     }
 }
 
@@ -668,14 +840,13 @@ footer {
       a {
         display: flex;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center;   
         width: 3.3rem;
         height: 3.3rem;
         color: #071210;
         border: 1px solid #000;
         border-radius: 50%;
-        
+
         color: #000;
         text-decoration: none;
         font-size: 18px;
@@ -688,7 +859,7 @@ footer {
           transform: scale(1.1);
         }
       }
-    }
+     }
   }
 
   .footer-last {
@@ -712,5 +883,4 @@ footer {
 }
 
 
-
-
+      

@@ -5,31 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
     <!-- koki -->
     <header class="header">
-        <button><img src="./assets/Logo.png" alt=""></button>
+        
 
-        <nav>
+        <button>
+            <img src="./assets/Logo.svg" alt="">
+            <img src="./assets/Logodarkmode.svg" alt="">
+        </button>
 
+
+         <nav class="nav-pop-up">
+    
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About US</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+
+            <button>Free Trial</button>
+        
         </nav>
+        
+        
+        <div class="header-buttons">
 
-        <div>
+       
 
-            <label for="dark-mode">
-                <img src="./assets/moon.png" alt="">
+           <label for="dark-mode" class="light-dark-modes-switcher">
+                <img src="./assets/darkmode-icon.svg" alt="" class="darkmode-icon"> 
+                <img src="./assets/lightmode-icon.svg" alt="" class="lightmode-icon">
                 <input type="checkbox" id="dark-mode">
             </label>
+                
+            <label for="burger-menu" class="burgermenu-closebutton">
+                 <img src="./assets/burger-menu.svg" alt="" class="burger-menu-icon">
+                 <img src="./assets/burger-menu-darkmode.svg" alt="" class="burger-menu-dark-mode-icon"> 
+                 <input type="checkbox" id="burger-menu">
+                    <div class="lightmode-closebutton">
+                        <img src="./assets/close-button1.svg" alt="">
+                        <img src="./assets/close-button2.svg" alt="">
+                    </div>
+                    <div class="darkmode-closebutton">
+                        <img src="./assets/close-button1darkmode.svg" alt="">
+                        <img src="./assets/close-button2darkmode.svg" alt="">
+                    </div>
+                    
+                
 
-            <label for="burger-menu">
-                <img src="./assets/burger-menu.png" alt="">
-                <input type="checkbox" id="burger-menu">
             </label>
 
         </div>
+
+
+        
+       
+
+        
+        
 
     </header>
     <main>
@@ -46,32 +87,112 @@
 
                     <button>
                         <div>
-                            <img src="./assets/play-btn.png" alt="">
+                            <img src="./assets/play-btn.svg" alt="">
                         </div>
                         Learn More
                     </button>
                 </div>
             </div>
+            <div class="hero-section-full">
 
-            <div class="hero-section-picture-section">
+                <div class="hero-card-column">
+                    <article>
+                        <h4>Our Happy Users</h4>
+                        <p>200+ Online User</p>
+                        <button>+</button>
+                    </article>
+                    <article>
+                        <h4>27K</h4>
+                        <p>Member Joined</p>
+                        <div>
+                            <img src="./assets/avatarpic1.png" alt="">
+                            <img src="./assets/avatarpic2.png" alt="">
+                            <img src="./assets/avatarpic3.png" alt="">
+                            <img src="./assets/avatarpic4.png" alt="">
+                        </div>
+                        
+                    </article>
+                    <article>
+                        <h4>27K</h4>
+                        <p>Member Joined</p>
+                        <div>
+                            <img src="./assets/avatarpic1.png" alt="">
+                            <img src="./assets/avatarpic2.png" alt="">
+                            <img src="./assets/avatarpic3.png" alt="">
+                            <img src="./assets/avatarpic4.png" alt="">
+                        </div>
+                    </article>
+                </div>
 
-                <div class="hero-pic-container">
-                    <div>
-                        <article>
-                            <h3>Our Happy Users</h3>
-                            <p>200+ Online User</p>
 
-                        </article>
+
+
+                <div class="hero-section-picture-section">
+
+                    <div class="hero-pic-container">
+                       
+                        
+                            <img src="./assets/girl-with-an-ipad.png" alt="">
+                        
+                        
                     </div>
-
-                    <img src="./assets/girl-with-an-ipad.png" alt="">
-
+    
 
                 </div>
 
+
             </div>
+            
 
         </section>
+        <section class="about-us">
+
+            <div class="about-us-header-text">
+                <h2>About US</h2>
+                <p>Skilline is one powerful online software 
+                   suite that combines all the tools needed
+                   to run a successful school or office.
+                </p>
+            </div>
+
+
+            <div class="about-us-cards">
+                <article>
+                    <div>
+                        <img src="./assets/article icon.svg" alt="">
+                    </div>
+                    <h3>Mission</h3>
+                    <p>Tailored career solutions, 
+                    industry-leading assessments, 
+                    and expert counseling.</p>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="./assets/article icon.svg" alt="">
+                    </div>
+                    <h3>Values</h3>
+                    <p>Tailored career solutions, 
+                       industry-leading assessments, 
+                       and expert counseling.</p>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="./assets/article icon.svg" alt="">
+                    </div>
+                    <h3>Unique Selling Points</h3>
+                    <p>Tailored career solutions, 
+                    industry-leading assessments, 
+                    and expert counseling.</p>
+                </article>
+
+            </div>
+            
+            <button>Get Started</button>
+
+        </section>
+
         <section class="about-us"></section>
         <!-- koki -->
 
@@ -136,11 +257,125 @@
             <!-- larisa -->
 
 
-            <!-- nutsa -->
-            <section class="costumer-reviews"></section>
-            <section class="lets-work-together"></section>
+
+    <!-- koki -->    
+
+
+    
+        
+    
+    <!-- nutsa -->
+        <section class="costumer-reviews">
+            <div class="reviews-main">
+                <h2>Reviews from our customers</h2>
+                <p class="reviews-subtitle">
+                    CareerPathNow has got more than 
+                    100k positive ratings from our users around the world. 
+                </p>
+
+                <div class="review-cards">
+                    <div class="review-card">
+                        <div class="card-header">
+                            <img src="assets/mila(review).png" alt="reviewerer">
+                            <div class="card-info">
+                                <h4>Mila Mcsabbu</h4>
+                                <span>Freelance Designer</span>
+                            </div>
+                        </div>
+                        <p>We test and compare the best project management software for collaborating with a team, hitting deadlines.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="card-header">
+                            <img src="assets/mila2(review).png" alt="reviewerer2">
+                            <div class="card-info">
+                                <h4>Mila Mcsabbu</h4>
+                                <span>Freelance Designer</span>
+                            </div>
+                        </div>
+                        <p>We test and compare the best project management software for collaborating with a team, hitting deadlines.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="card-header">
+                            <img src="assets/mila3(review).png" alt="reviewerer3">
+                            <div class="card-info">
+                                <h4>Mila Mcsabbu</h4>
+                                <span>Freelance Designer</span>
+                            </div>
+                        </div>
+                        <p>We test and compare the best project management software for collaborating with a team, hitting deadlines.</p>
+                    </div>
+                </div>
+
+                <div class="reviews-seemore">
+                    <button>See More</button>
+                </div>
+
+                <div class="review-controls">
+                    <button class="arrow prev">←</button>
+                    <button class="arrow next">→</button>
+                </div>
+            </div>
+        </section>
+            
+        <section class="lets-work-together">
+            <div class="work-container">
+                <div class="work-header">
+                    <h2>Let's Work Together To Grow Your Business</h2>
+                    <p>
+                        Sollicitudin ac orci phasellus egestas tellus rutrum. Lacus viverra 
+                        vitae congue eu consequat ac. Nulla pharetra diam sit amet nisl suscipit.
+                    </p>
+                </div>
+
+                <form class="work-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group-last">
+                        <textarea placeholder="Description" rows="6"></textarea>
+                    </div>
+                    
+                    <div class="form-action">
+                        <button type="submit">Contact Us</button>
+                    </div>
+                </form>
+            </div>
+        </section> 
+
     </main>
-    <footer></footer>
+    
+    <footer>
+        <div class="footer-header">
+            <h4>CareerPathNow</h4>
+            <p>Address of the organization</p>
+            <p>+01 (787)-8765456</p>
+        </div>
+
+        <div class="footer-logos">
+            <p>Find Us On Social Media:</p>
+            <div class="social-wrapper">
+                <a href='#'><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-last">
+            <p>We’re Always Happy To Help</p>
+            <p class="email-text">CareerPathNow@gmail.com</p>
+        </div>
+    </footer>
     <!-- nutsa -->
 </body>
 

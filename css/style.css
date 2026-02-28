@@ -301,6 +301,191 @@ body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-ch
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+}
+
+.our-services-mob {
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.our-services-mob .wrapper-mob {
+  min-width: 30rem;
+  min-height: 79.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgb(232, 219, 132);
+}
+.our-services-mob .banner-content-mob {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+.our-services-mob .banner-content-mob h1 {
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.02rem;
+  color: rgb(24, 59, 86);
+}
+.our-services-mob .banner-content-mob p {
+  width: 25.2rem;
+  height: 16.8rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: rgb(0, 0, 0);
+}
+.our-services-mob .banner-content-mob ul {
+  width: 25.2rem;
+  height: 15.4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.our-services-mob .banner-content-mob ul li {
+  width: 100%;
+  height: 3.8rem;
+  position: relative;
+  padding: 1rem;
+  margin-left: 5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: rgb(0, 0, 0);
+}
+.our-services-mob .banner-content-mob ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  margin-left: -5rem;
+  display: block;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background-image: url("../../images/Mask.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(255, 255, 255);
+}
+.our-services-mob .banner-mob {
+  position: relative;
+  background-color: rgb(232, 219, 132);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.our-services-mob .banner-mob .window-controls-mob {
+  background-color: rgba(244, 244, 244, 0.6);
+  backdrop-filter: blur(2rem);
+  border-radius: 1.26rem;
+  position: relative;
+  width: 23.3rem;
+  height: 23.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  z-index: 3;
+}
+.our-services-mob .banner-mob .window-controls-mob .small-button-mob {
+  width: 100%;
+  height: 1.1rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 2rem;
+  z-index: 2;
+}
+.our-services-mob .banner-mob .window-controls-mob .small-button-mob, .our-services-mob .banner-mob .window-controls-mob .small-button-mob::before, .our-services-mob .banner-mob .window-controls-mob .small-button-mob::after {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.our-services-mob .banner-mob .window-controls-mob .small-button-mob {
+  background-color: rgb(246, 197, 102);
+}
+.our-services-mob .banner-mob .window-controls-mob .small-button-mob::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  background-color: rgb(238, 103, 103);
+}
+.our-services-mob .banner-mob .window-controls-mob .small-button-mob::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  background-color: rgb(91, 235, 123);
+}
+.our-services-mob .banner-mob img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 5;
+  border-radius: 1.5rem;
+}
+.our-services-mob .banner-mob .tel {
+  max-width: 20.1rem;
+  max-height: 10.2rem;
+}
+.our-services-mob .banner-mob .comp {
+  max-width: 7.6rem;
+  max-height: 8.9rem;
+}
+.our-services-mob .banner-mob .men {
+  max-width: 11.2rem;
+  max-height: 8.9rem;
+}
+.our-services-mob .banner-mob .circle {
+  width: 9.96rem;
+  height: 9.96rem;
+  border-radius: 50%;
+  background-color: rgb(5, 42, 68);
+  position: absolute;
+  top: 17rem;
+  left: -3rem;
+}
+
+.btn-mob {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.5rem;
+  height: 3.7rem;
+  padding: 1rem 1.5rem;
+  background-color: rgb(5, 42, 68);
+  color: rgb(255, 255, 255);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+.btn-mob:hover {
+  opacity: 0.8;
+}
+.btn-mob:active {
+  transform: translateY(1px);
+}
+.btn-mob {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+body {
   padding: 2rem 2.4rem;
   background-color: rgb(255, 255, 255);
 }
@@ -332,7 +517,8 @@ body {
 }
 .header div {
   display: flex;
-  column-gap: 3.6rem;
+  -moz-column-gap: 3.6rem;
+       column-gap: 3.6rem;
 }
 .header .header-buttons label:nth-child(2) img {
   height: 2.4rem;
@@ -427,7 +613,8 @@ body {
 }
 .hero-section-text-cont div {
   display: flex;
-  column-gap: 0.8rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
 }
 .hero-section-text-cont div button:nth-child(1) {
   font-size: 1.4rem;
@@ -443,7 +630,8 @@ body {
   border: none;
   width: 14.2rem;
   display: flex;
-  column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
   align-items: center;
   color: black;
   font-weight: 500;
@@ -595,6 +783,7 @@ body {
   position: absolute;
   bottom: 0;
   left: -30%;
+
 }
 
 .about-us-header-text {
@@ -734,4 +923,5 @@ body:has(#dark-mode:checked) .hero-section .hero-section-text-cont button:nth-ch
 }
 body:has(#dark-mode:checked) .about-us .about-us-header-text h2, body:has(#dark-mode:checked) .about-us .about-us-header-text p {
   color: white;
+
 }

@@ -1,3 +1,4 @@
+
 @use "./reset";
 @use "./fonts";
 @use "./Feedback-Footer";
@@ -191,6 +192,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+
     position: relative;
     button:nth-child(1) {
         img:nth-child(2) {
@@ -207,6 +209,7 @@ body {
     input {
         display: none;
     }
+
 
     button:nth-child(1) {
         background-color: transparent;
@@ -586,8 +589,7 @@ body {
         
     }
 
- 
- 
+
 
 
 
